@@ -1,0 +1,22 @@
+{
+  "name": "coding-challenge",
+  "version": "1.0.0",
+  "description": "Simple coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexceb/coding-challenge.git"
+  },
+  "author": "Alex C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexceb/coding-challenge/issues"
+  },
+  "homepage": "https://github.com/alexceb/coding-challenge#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
