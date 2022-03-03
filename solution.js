@@ -1,6 +1,6 @@
 /*
-    You application fetches crypto currencies transactions data.
-    The task is to implement the function that will calculate the total amount for selected crypto currencies within selected time period.
+    You application fetches crypto currencies transactions data of user crypto wallet.
+    The task is to implement the function that will calculate the total balance for selected crypto currencies within selected time period.
 
     Function accepts:
         - transaction data which is array
@@ -12,9 +12,10 @@
     {
         [cryptoCurrency]: balanceAmount
     }
-    
+*/
+
+/*
     Example of the function call:
-    
     const balance = getBalanceByCurrencyInPeriod(
         [
             {
