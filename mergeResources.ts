@@ -63,7 +63,7 @@ const bookmarks: Array<Bookmark> = [
     ...
 	{
 		"name": "Fantasy",
-		"videos": [
+		"books": [
 			{
 				"id": 70111470,
 				"title": "Harry Potter",
@@ -83,20 +83,20 @@ const bookmarks: Array<Bookmark> = [
 */
 
 // Describes book genre
-type BookGenre = {
+export type BookGenre = {
     id: number;
     name: string;
 }
 
 // Book entity
-type Book = {
+export type Book = {
     genreId: BookGenre['id'];
     id: number;
     title: string;
 }
 
 // Represent the properties of the boxart of the book on the webpage
-type Boxart = {
+export type Boxart = {
     bookId: Book['id'];
     width: number;
     height: number;
@@ -104,14 +104,14 @@ type Boxart = {
 }
 
 // Show the user's book reading progress
-type Bookmark = {
+export type Bookmark = {
     bookId: Book['id'],
     page: number;
 }
 
-type MergedResourceArray = Array<{
+export type MergedResourceArray = Array<{
     name: BookGenre['name'];
-    videos: Array<{
+    books: Array<{
         id: Book['id'];
         title: Book['title'];
         page: Bookmark['page'];
@@ -119,13 +119,11 @@ type MergedResourceArray = Array<{
     }>
 }>
 
-const mergeBooksResources = (
-    genreList: Array<BookGenre>,
-    books: Array<Book>,
-    boxarts: Array<Boxart>,
-    bookmarks: Array<Bookmark>,
+export const mergeBooksResources = (
+    genreList?: Array<BookGenre>,
+    books?: Array<Book>,
+    boxarts?: Array<Boxart>,
+    bookmarks?: Array<Bookmark>,
 ): MergedResourceArray | void => {
     // Add your code below
 }
-
-module.exports = mergeBooksResources;
