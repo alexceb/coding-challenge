@@ -1,4 +1,4 @@
-const getBalanceByCurrencyInPeriod = require('./solution');
+const getBalanceByCurrencyInPeriod = require('./transactionBalance');
 
 describe('getBalanceByCurrencyInPeriod()', () => {
   // This is an example test. Please add your own tests if needed
