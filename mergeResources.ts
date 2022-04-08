@@ -54,7 +54,7 @@ const bookmarks: Array<Bookmark> = [
 */
 
 // We want to build an array of genre objects, each with a name and a books array.
-// The result array will contain the book's id, title, bookmark page, and smallest boxart url. 
+// The result array will contain the book's id, title, bookmark page, and the smallest boxart url. 
 // Check the Typescript signature below.
 // In other words we want to build the following structure:
 
@@ -120,10 +120,10 @@ export type MergedResourceArray = Array<{
 }>
 
 export const mergeBooksResources = (
-    genreList?: Array<BookGenre>,
-    books?: Array<Book>,
-    boxarts?: Array<Boxart>,
-    bookmarks?: Array<Bookmark>,
+    genreList: Array<BookGenre>,
+    books: Array<Book>,
+    boxarts: Array<Boxart>,
+    bookmarks: Array<Bookmark>,
 ): MergedResourceArray | void => {
     // Add your code below
 }

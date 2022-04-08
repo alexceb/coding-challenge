@@ -103,7 +103,42 @@ describe('Testing mergeBooksResources()', () => {
             },
         ]);
     });
-    it('returns empty array if no data was provided', () => {
-        expect(mergeBooksResources()).toEqual([]);
+    it('books array should for each genre should be empty if no match was found', () => {
+        const limitedBooks: Array<Book> = [
+            {
+                "genreId": 65456475,
+                "id": 65432445,
+                "title": "How to be effective?"
+            },
+            {
+                "genreId": 65456475,
+                "id": 675465,
+                "title": "Endurance"
+            },
+        ];
+        expect(mergeBooksResources(lists, limitedBooks, boxarts, bookmarks))
+            .toEqual<MergedResourceArray>([
+                {
+                    name: 'Fantasy',
+                    books: [],
+                },
+                {
+                    name: 'Thrillers',
+                    books: [
+                        {
+                            "id": 675465,
+                            "title": "Endurance",
+                            "page": 333,
+                            "boxart": "Endurance120.jpg"
+                        },
+                        {
+                            "id": 65432445,
+                            "title": "How to be effective?",
+                            "page": 12,
+                            "boxart": "BeingEffective130.jpg"
+                        },
+                    ],
+                },
+            ]);
     })
 });
