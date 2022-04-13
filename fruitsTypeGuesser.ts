@@ -12,7 +12,7 @@ type FruitItem = {
     Type might be similar if:
     - it's coming from the same country
     - the difference in weight is not greater than 50 gramms
-    - if it fitts more than 1 type of the fruit, use the with the smalles weight difference
+    - if it fitts more than 1 type of the fruit, use the one with the smallest weight difference
 
     Input example:
 
