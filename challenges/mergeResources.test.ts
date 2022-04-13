@@ -88,16 +88,16 @@ describe('Testing mergeBooksResources()', () => {
                 name: 'Thrillers',
                 books: [
                     {
-                        "id": 675465,
-                        "title": "Endurance",
-                        "page": 333,
-                        "boxart": "Endurance120.jpg"
-                    },
-                    {
                         "id": 65432445,
                         "title": "How to be effective?",
                         "page": 12,
                         "boxart": "BeingEffective130.jpg"
+                    },
+                    {
+                        "id": 675465,
+                        "title": "Endurance",
+                        "page": 333,
+                        "boxart": "Endurance120.jpg"
                     },
                 ],
             },
@@ -126,17 +126,17 @@ describe('Testing mergeBooksResources()', () => {
                     name: 'Thrillers',
                     books: [
                         {
-                            "id": 675465,
-                            "title": "Endurance",
-                            "page": 333,
-                            "boxart": "Endurance120.jpg"
-                        },
-                        {
                             "id": 65432445,
                             "title": "How to be effective?",
                             "page": 12,
                             "boxart": "BeingEffective130.jpg"
                         },
+                        {
+                            "id": 675465,
+                            "title": "Endurance",
+                            "page": 333,
+                            "boxart": "Endurance120.jpg"
+                        }
                     ],
                 },
             ]);

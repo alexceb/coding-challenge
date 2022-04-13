@@ -119,6 +119,14 @@ export type MergedResourceArray = Array<{
     }>
 }>
 
+const combineArrays = <L, R>(left: Array<L>, right: Array<R>, combinerFunction: (lItem: L, rItem: R) => any): Array<any> => {
+    const result = [];
+    for (let i=0; i < Math.min(left.length, right.length); i++) {
+        result.push(combinerFunction(left[i], right[i]));
+    }
+    return result;
+}
+
 export const mergeBooksResources = (
     genreList: Array<BookGenre>,
     books: Array<Book>,
